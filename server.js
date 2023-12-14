@@ -3,8 +3,8 @@ const  dotenv = require('dotenv').config();
 
 const app =express();
 
-app.get("/", (req, res) => {
-    res.send("server stated")
+app.get("/health", (req, res) => {
+    res.send("server running properly")
     
 })
 
