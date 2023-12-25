@@ -2,7 +2,7 @@ const userCollection = require("../models/user")
 const bcrypt = require('bcrypt')
 const jwt = require('jsonwebtoken')
 const setCookie = require("../utils/cookie")
-const {ErrorHandler, errorMiddleware} = require("../middlewares/error")
+const {ErrorHandler, errorMiddleware} = require("../middlewares/Error")
 const jobCollection = require("../models/job")
 
 const checkRoute = (req, res) => {

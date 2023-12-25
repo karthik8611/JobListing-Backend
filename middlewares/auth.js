@@ -1,5 +1,5 @@
 const userCollection = require("../models/user")
-const { ErrorHandler } = require("./error")
+const { ErrorHandler } = require("./Error")
 const jwt = require('jsonwebtoken')
 
 const isAuthenticated = async (req, res, next) => {
