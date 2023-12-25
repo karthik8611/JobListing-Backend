@@ -1,20 +1,10 @@
-const express= require('express');
-const  dotenv = require('dotenv').config();
+const app = require('./app')
+const connectDB = require('./config/database')
 
-const app =express();
-
-app.get("/health", (req, res) => {
-    res.send("server running properly")
-    
+app.listen(process.env.PORT, () => {
+    connectDB()
+    console.log(`server is working on PORT:${process.env.PORT}`)
+    console.log(new Date())
 })
-
-const port =process.env.PORT || 5000
-
-app.listen(port,()=>{
-    console.log(`listening on port ${port}`);
-})
-
-
-
 
 
